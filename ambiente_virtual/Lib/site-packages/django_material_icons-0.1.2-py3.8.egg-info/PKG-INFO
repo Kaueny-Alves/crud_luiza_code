@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: django-material-icons
+Version: 0.1.2
+Summary: A quick way to add Material Icons with Django template tags.
+Home-page: https://github.com/dwdresser/django-material-icons
+Author: Doug Dresser
+Author-email: Doug.Dresser1@gmail.com
+License: MIT
+Description: # django-material-icons
+        A quick way to add Material Icons with Django template tags.
+        
+Keywords: django,material,icons,templatetags
+Platform: UNKNOWN
