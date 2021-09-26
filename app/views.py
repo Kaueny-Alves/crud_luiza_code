@@ -69,3 +69,7 @@ def updatePacotes(request, pk):
   if form.is_valid():
     form.save()
     return HttpResponseRedirect("/")
+  
+def getPacotes(request,pk):
+  data = {'db': Empresas.objects.get(pk = pk)}
+  return render(request, 'view.html', data)

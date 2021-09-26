@@ -10,4 +10,4 @@ class EmpresasForm(ModelForm):
 class PacotesForm(ModelForm):
   class Meta:
     model = Pacotes
-    fields = ['preco', 'destino', 'dias', 'dataIda', 'dataVolta', 'tipo', 'empresa']
+    fields = ['preco', 'destino', 'data', 'tipo', 'empresa']
