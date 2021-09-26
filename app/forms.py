@@ -1,5 +1,6 @@
 from django.forms import ModelForm, fields
-from app.models import Empresas, Pacotes
+from app.models import Empresas
+from app.modelsPacotes import Pacotes
 
 class EmpresasForm(ModelForm):
   class Meta:
@@ -9,4 +10,4 @@ class EmpresasForm(ModelForm):
 class PacotesForm(ModelForm):
   class Meta:
     model = Pacotes
-    fields = ['preco', 'destino', 'quantidade', 'data', 'tipo', 'empresa']
+    fields = ['preco', 'destino', 'data', 'tipo', 'empresa']

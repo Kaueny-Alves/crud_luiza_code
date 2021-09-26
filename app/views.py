@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from app.models import Empresas, Pacotes
+from app.modelsPacotes import Pacotes
+from app.models import Empresas
 from app.forms import EmpresasForm, PacotesForm
 from django.http import HttpResponseRedirect
 
@@ -68,3 +69,7 @@ def updatePacotes(request, pk):
   if form.is_valid():
     form.save()
     return HttpResponseRedirect("/")
+  
+def getPacotes(request,pk):
+  data = {'db': Empresas.objects.get(pk = pk)}
+  return render(request, 'view.html', data)
