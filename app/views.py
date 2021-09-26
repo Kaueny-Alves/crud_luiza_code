@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from app.models import Empresas
-from app.forms import EmpresasForm
+from app.models import Empresas, Pacotes
+from app.forms import EmpresasForm, PacotesForm
 from django.http import HttpResponseRedirect
 
 def home(request):
@@ -45,3 +45,26 @@ def delete(request, pk):
   db = Empresas.objects.get(pk = pk)
   db.delete()
   return HttpResponseRedirect("/")
+
+def createPacotes(request):
+  form = PacotesForm(request.POST or None)
+  if form.is_valid():
+    form.save()
+    return HttpResponseRedirect("/")
+
+def formPacotes(request):
+  data = {'form': PacotesForm()}
+  return render(request, 'formPacotes.html', data)
+
+def deletePacotes(request, pk):
+  db = Pacotes.objects.get(pk = pk)
+  db.delete()
+  return HttpResponseRedirect("/form")
+
+def updatePacotes(request, pk):
+  data = {}
+  data['db'] = Pacotes.objects.get(pk = pk)
+  form = PacotesForm(request.POST or None, instance = data['db'])
+  if form.is_valid():
+    form.save()
+    return HttpResponseRedirect("/")
