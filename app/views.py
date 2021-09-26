@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from app.models import Empresas, Pacotes
+from app.modelsPacotes import Pacotes
+from app.models import Empresas
 from app.forms import EmpresasForm, PacotesForm
 from django.http import HttpResponseRedirect
 
