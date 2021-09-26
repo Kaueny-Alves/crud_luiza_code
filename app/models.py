@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import migrations, models
 
 class Empresas(models.Model):
     cnpj = models.CharField(max_length=14)
