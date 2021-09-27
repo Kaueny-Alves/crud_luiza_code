@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
-from app.models import Empresas, Pacotes
+from app.modelsPacotes import Pacotes
+from app.models import Empresas
 from app.forms import EmpresasForm, PacotesForm
 from django.http import HttpResponseRedirect
 
 def home(request):
   data = {}
   search = request.GET.get('search')
-  
   if search:
     data['db'] = Empresas.objects.filter(modelo__icontains = search)
   else:
@@ -68,3 +68,12 @@ def updatePacotes(request, pk):
   if form.is_valid():
     form.save()
     return HttpResponseRedirect("/")
+  
+def homePacotes(request):
+  data = {}
+  data['db'] = Pacotes.objects.all()
+  return render(request, 'index.html', data)
+  
+def viewPacotes(request,pk):
+  data = {'db': Pacotes.objects.get(pk = pk)}
+  return render(request, 'view.html', data)

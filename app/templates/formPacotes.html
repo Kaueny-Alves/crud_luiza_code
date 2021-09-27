@@ -1,5 +1,26 @@
-
 <!DOCTYPE html>
+​
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+​
+<!-- Bootstrap Static Header -->
+<div style="background: url(https://i.postimg.cc/3N7wnb75/background.jpg)" class="jumbotron bg-cover text-white">
+  <div class="container py-5 text-center">
+      <h1 class="display-4 font-weight-bold">G7 Viagens</h1>
+      <p class="font-italic mb-0">Os melhores destinos, as melhores lembranças.</p>
+  </div>
+</div>
+​
+<div class="container py-5">
+  <h2 class="h3 font-weight-bold">Cadastro de pacotes </h2>
+  <div class="row">
+      <div class="col-lg-10 mb-4">
+​
+            <p class="font-italic text-muted"> <strong class="font-weight-bold text-dark"> Preencha</strong> os campos abaixo para 
+              cadastrar seu pacote de viagens. </p>  
+        </div>
+  </div>
+</div>
+​
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -9,13 +30,24 @@
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <title>cadastro de pacotes</title>
   </head>
-
-  <body style="background-color: rgb(223, 169, 116)">
-    <div>
-      <h1 style="color: red" >Cadastro de pacotes</h1>
-    </div>
-
-    <div >
+​
+<body>
+  <style>
+    .button{
+    background-color: rgb(223, 169, 116);
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+    }
+  </style>
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
       <form
         name="form"
         id="form"
@@ -24,17 +56,48 @@
         action="{% if db %}/updatePacotes/{{ db.id }}/{% else %}/createPacotes/{% endif %}"
       >
         {% csrf_token %}
-        <div class="">Preço: {{ form.preco }}</div>
-        <div class="">Destino: {{ form.destino }}</div>
-        <div class="">Tipo: {{ form.tipo }}</div>
-        <div class="">Quantidade: {{ form.quantidade }}</div>
-        <div class="">Data: {{ form.data }}</div>
-        <div class="">Empresa: {{ form.empresa }}</div>
+        <div class="form-group row">Preço: {{ form.preco }}</div>
+        <div class="form-group row">Destino: {{ form.destino }}</div>
+        <div class="form-group row">Tipo: {{ form.tipo }}</div>
+        <div class="form-group row">Data: {{ form.data }}</div>
+        <div class="form-group row">Empresa: {{ form.empresa }}</div>
         <div class="">
-          <input type="submit" class="btn btn-success" value="Salvar" />
-          <a href="/" class="btn btn-info">Voltar</a>
+          <p><ul>
+            <input type="submit"  class="button" value="Salvar">
+          </ul></p>          <div class="col-8 m-auto pt-3 pb-2 text-center">
+            <a href="/" style="font-size:24px"><i class="fa fa-backward"></i></a>
+          </div>
         </div>
       </form>
     </div>
   </body>
+​
+<!-- Site footer -->
+<footer class="site-footer">
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by G7 Viagens.
+        </p>
+      </div>
+​
+    
+​
+      <div class="col-md-4 col-sm-2 col-xs-10">
+        <h6 > Conecte-se a nossas redes sociais:</h6>
+​
+        <ul class="social-icons">
+          <a class="facebook" href="#"><i style="font-size:24px" class="fa fa-facebook"></i></a>
+          <a class="facebook" href="#"><i style="font-size:24px" class="fa fa-instagram"></i></a>
+          <a class="twitter" href="#"><i style="font-size:24px" class="fa fa-twitter"></i></a>
+          <a class="dribbble" href="#"><i style="font-size:24px" class="fa fa-envelope"></i></a>
+          <a class="dribbble" href="#"><i style="font-size:24px" class="fa fa-linkedin"></i></a>
+          <a class="dribbble" href="#"><i style="font-size:24px" class="fa fa-youtube"></i></a>
+​
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>

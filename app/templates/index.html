@@ -69,6 +69,7 @@
           <th scope="col">E-mail</th>
           <th scope="col">CNPJ</th>
           <th scope="col">Telefone</th>
+​
         </tr>
       </thead>
       <tbody>
@@ -79,7 +80,6 @@
           <td>{{ dbs.email }}</td>
           <td>{{ dbs.cnpj }}</td>
           <td>{{ dbs.telefone }}</td>
-​
           <td>
             <a href="/view/{{ dbs.id }}" style="font-size:24px"><i class="fa fa-folder-open"></i></a>
             <a href="/edit/{{ dbs.id }}" style="font-size:24px"><i class="fa fa-edit"></i></a>
@@ -92,9 +92,6 @@
   </div> 
   <div class="col-2 m-auto pt-3 pb-2 text-center">
     <a href="/form" class="button">CADASTRAR</a>
-  </div> 
-  <div class="col-2 m-auto pt-3 pb-2 text-center">
-    <a href="/formPacotes" class="button">Ver pacotes</a>
   </div> 
 </body>
 ​
