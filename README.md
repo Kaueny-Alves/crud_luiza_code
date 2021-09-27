@@ -32,12 +32,12 @@
 
 🔧 Pré-requisitos:
 
--[Docker](“https://docs.docker.com/get-docker/“)
--[Kubernetes](“https://kubernetes.io/releases/download/“)
--[Minikube](“https://minikube.sigs.k8s.io/docs/start/“)
+*[Docker](https://docs.docker.com/get-docker/)
+*[Kubernetes](https://kubernetes.io/releases/download/)
+*[Minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 
-> Com o -[Docker](“https://docs.docker.com/get-docker/“) instalado e rodando em sua máquina forneça o seguinte comando:
+> Com o [Docker](https://docs.docker.com/get-docker/) instalado e rodando em sua máquina forneça o seguinte comando:
 
     docker pull alinebellozo/python-crud:v4
 
