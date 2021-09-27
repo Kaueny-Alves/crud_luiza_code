@@ -7,7 +7,6 @@ from django.http import HttpResponseRedirect
 def home(request):
   data = {}
   search = request.GET.get('search')
-  
   if search:
     data['db'] = Empresas.objects.filter(modelo__icontains = search)
   else:
@@ -70,6 +69,11 @@ def updatePacotes(request, pk):
     form.save()
     return HttpResponseRedirect("/")
   
-def getPacotes(request,pk):
-  data = {'db': Empresas.objects.get(pk = pk)}
+def homePacotes(request):
+  data = {}
+  data['db'] = Pacotes.objects.all()
+  return render(request, 'index.html', data)
+  
+def viewPacotes(request,pk):
+  data = {'db': Pacotes.objects.get(pk = pk)}
   return render(request, 'view.html', data)
