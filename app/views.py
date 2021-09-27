@@ -8,7 +8,7 @@ def home(request):
   data = {}
   search = request.GET.get('search')
   if search:
-    data['db'] = Empresas.objects.filter(modelo__icontains = search)
+    data['db'] = Empresas.objects.filter(nome__icontains = search)
   else:
     data['db'] = Empresas.objects.all()
   return render(request, 'index.html', data)
