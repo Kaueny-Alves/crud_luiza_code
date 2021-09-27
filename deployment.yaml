@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: python-crud
-          image: alinebellozo/python-crud:v3
+          image: alinebellozo/python-crud:v4
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000

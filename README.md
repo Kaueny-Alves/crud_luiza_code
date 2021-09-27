@@ -38,33 +38,44 @@
 
 * [Minikube](https://minikube.sigs.k8s.io/docs/start/)
 
+> Para acessar a aplicação, rode o comando:
+
+    python3 manage.py runserver
+
+> Caso não funcione, tente o comando:
+
+    python manage.py runserver
+
+> Vai aparecer o link: http://127.0.0.1:8000/, que é onde a aplicação está rodando. Segure a tecla Ctrl apertada e clique com o mouse em cima do link para abrir no navegador.
+
+> Também é possível acessar diretamente do navegador, inserindo: localhost:8000
+
+
+> Para obter acesso à imagem, siga os passos abaixo:
 
 > Com o [Docker](https://docs.docker.com/get-docker/) instalado e rodando em sua máquina forneça o seguinte comando:
 
     docker pull alinebellozo/python-crud:v4
 
 
-> Em seguida, rode a aplicação em sua máquina:
+> Em seguida, rode a aplicação em sua máquina com o comando:
 
-    docker run -d -p 8000:8000 -it alinebellozo/python-crud
+    docker run -d -p 8000:8000 -it alinebellozo/python-crud:v4
 
-> Na pasta do projeto, inicie o <a href=“https://kubernetes.io/releases/download/“>Kubernetes</a> em sua máquina:
+> Na mesma pasta do projeto, inicie o <a href=“https://kubernetes.io/releases/download/“>Kubernetes</a> em sua máquina:
 
     minikube start
 
-> Leia o arquivo _deployment.yaml_:
+> Ao finalizar a configuração, leia o arquivo _deployment.yaml_ por meio do comando:
 
     kubectl apply -f deployment.yaml
 
-> Adicione a imagem no <a href=“https://minikube.sigs.k8s.io/docs/start/“>Minikube</a>:
-
-    docker save alinebellozo/python-crud | (eval $(minikube docker-env) && docker load)
-
-> Abra o dashboard:
+> Então, rode o seguinte comando para abrir o dashboard:
 
     minikube dashboard
 
-> Selecione a opção _kube-system_
+> No Workload Status, você verá círculos verde, o que significa que o deploy no Kubernetes foi feito!
+> Para visualizar mais detalhes sobre o deploy, role a tela para baixo e clique no nome do projeto.
 
 
 ## 💻 Navegando pelo site
