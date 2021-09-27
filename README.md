@@ -89,7 +89,7 @@
 ## 👩‍💻 Desenvolvido por
 
 
-> <a href=“https://github.com/alinebellozo“>Aline Bellozo</a>,  <a href=“https://github.com/Kaueny-Alves“>Kaueny Alves</a>, <a href=“https://github.com/MClaudia-Correia“>Maria Claudia Correia</a> e <a href=“https://github.com/ShayaneGonzalez“>Shayane Gonzalez</a>
+> <a href=https://github.com/alinebellozo>Aline Bellozo</a>,  <a href=https://github.com/Kaueny-Alves>Kaueny Alves</a>, <a href=https://github.com/MClaudia-Correia>Maria Claudia Correia</a> e <a href=https://github.com/ShayaneGonzalez>Shayane Gonzalez</a>
 <img src="figs\devs.PNG" alt="create pacotes" width="2000"/>
 
 
